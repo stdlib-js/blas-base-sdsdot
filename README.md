@@ -50,7 +50,7 @@ The [dot product][dot-product] (or scalar product) is defined as
 To use in Observable,
 
 ```javascript
-sdsdot = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-sdsdot@umd/browser.js' )
+sdsdot = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-sdsdot@v0.0.8-umd/browser.js' )
 ```
 
 To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
@@ -62,7 +62,7 @@ var sdsdot = require( 'path/to/vendor/umd/blas-base-sdsdot/index.js' )
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-sdsdot@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-sdsdot@v0.0.8-umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -197,7 +197,7 @@ var z = sdsdot.ndarray( N, 0.0, x, 2, 1, y, -1, y.length-1 );
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-sdsdot@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-sdsdot@v0.0.8-umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
