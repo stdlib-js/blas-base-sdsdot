@@ -48,6 +48,11 @@ The [dot product][dot-product] (or scalar product) is defined as
 ## Usage
 
 ```javascript
+import sdsdot from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-sdsdot@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/blas-base-sdsdot/tags). For example,
+
+```javascript
 import sdsdot from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-sdsdot@v0.0.8-esm/index.mjs';
 ```
 
@@ -175,7 +180,7 @@ var z = sdsdot.ndarray( N, 0.0, x, 2, 1, y, -1, y.length-1 );
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
 import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
 import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@esm/index.mjs';
-import sdsdot from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-sdsdot@v0.0.8-esm/index.mjs';
+import sdsdot from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-sdsdot@esm/index.mjs';
 
 var x;
 var y;
