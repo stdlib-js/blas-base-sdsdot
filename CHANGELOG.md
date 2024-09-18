@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-09-01)
+## Unreleased (2024-09-18)
+
+<section class="features">
+
+### Features
+
+-   [`f7edbe0`](https://github.com/stdlib-js/stdlib/commit/f7edbe044289b877586d0140467cb43cdfd18c19) - add C `ndarray` implementation for `blas/base/sdsdot` [(#2921)](https://github.com/stdlib-js/stdlib/pull/2921)
+
+</section>
+
+<!-- /.features -->
 
 <section class="commits">
 
@@ -12,6 +22,7 @@
 
 <details>
 
+-   [`f7edbe0`](https://github.com/stdlib-js/stdlib/commit/f7edbe044289b877586d0140467cb43cdfd18c19) - **feat:** add C `ndarray` implementation for `blas/base/sdsdot` [(#2921)](https://github.com/stdlib-js/stdlib/pull/2921) _(by Aman Bhansali, Athan Reines)_
 -   [`2777e4b`](https://github.com/stdlib-js/stdlib/commit/2777e4be161869d09406e3b17947d24c64b47af2) - **bench:** resolve lint errors in benchmarks _(by Athan Reines)_
 
 </details>
@@ -24,8 +35,9 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
+-   Aman Bhansali
 -   Athan Reines
 
 </section>
