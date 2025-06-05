@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-05-26)
+## Unreleased (2025-06-05)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`847dd6f`](https://github.com/stdlib-js/stdlib/commit/847dd6ffbfbd48ccf523e0af97201280bf0022f1) - **refactor:** rename variable in `blas/base/sdsdot` [(#7208)](https://github.com/stdlib-js/stdlib/pull/7208) _(by Shabareesh Shetty)_
 -   [`62364f6`](https://github.com/stdlib-js/stdlib/commit/62364f62ea823a3b52c2ad25660ecd80c71f8f36) - **style:** fix C comment alignment _(by Philipp Burckhardt)_
 -   [`6a0d6b8`](https://github.com/stdlib-js/stdlib/commit/6a0d6b861f8e2079a501ca4e46a9175440eedb46) - **style:** update to use tabs for indentation _(by Philipp Burckhardt)_
 -   [`f7edbe0`](https://github.com/stdlib-js/stdlib/commit/f7edbe044289b877586d0140467cb43cdfd18c19) - **feat:** add C `ndarray` implementation for `blas/base/sdsdot` [(#2921)](https://github.com/stdlib-js/stdlib/pull/2921) _(by Aman Bhansali, Athan Reines)_
@@ -37,11 +38,12 @@
 
 ### Contributors
 
-A total of 3 people contributed to this release. Thank you to the following contributors:
+A total of 4 people contributed to this release. Thank you to the following contributors:
 
 -   Aman Bhansali
 -   Athan Reines
 -   Philipp Burckhardt
+-   Shabareesh Shetty
 
 </section>
 
