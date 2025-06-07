@@ -56,32 +56,38 @@ The [dot product][dot-product] (or scalar product) is defined as
 
 <!-- /.intro -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/blas-base-sdsdot
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var sdsdot = require( '@stdlib/blas-base-sdsdot' );
+sdsdot = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-sdsdot@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var sdsdot = require( 'path/to/vendor/umd/blas-base-sdsdot/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-sdsdot@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.sdsdot;
+})();
+</script>
 ```
 
 #### sdsdot( N, scalar, x, strideX, y, strideY )
@@ -190,9 +196,14 @@ var z = sdsdot.ndarray( 3, 0.0, x, 2, 1, y, -1, y.length-1 );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
-var sdsdot = require( '@stdlib/blas-base-sdsdot' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-sdsdot@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 var opts = {
     'dtype': 'float32'
@@ -205,6 +216,11 @@ console.log( y );
 
 var out = sdsdot( x.length, 0.0, x, 1, y, -1 );
 console.log( out );
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -213,137 +229,7 @@ console.log( out );
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/blas/base/sdsdot.h"
-```
-
-#### c_sdsdot( N, scalar, \*X, strideX, \*Y, strideY )
-
-Calculates the dot product of vectors `x` and `y` with extended accumulation.
-
-```c
-const float x[] = { 1.0f, -2.0f, 3.0f, -4.0f, 5.0f, -6.0f, 7.0f, -8.0f };
-const float y[] = { 1.0f, -2.0f, 3.0f, -4.0f, 5.0f, -6.0f, 7.0f, -8.0f };
-
-float v = c_sdsdot( 5, 0.0f, x, 1, y, -1 );
-// returns -120.0f
-```
-
-The function accepts the following arguments:
-
--   **N**: `[in] CBLAS_INT` number of indexed elements.
--   **scalar**: `[in] float` scalar constant to add to dot product.
--   **X**: `[in] float*` first input array.
--   **strideX**: `[in] CBLAS_INT` index increment for `X`.
--   **Y**: `[in] float*` second input array.
--   **strideY**: `[in] CBLAS_INT` index increment for `Y`.
-
-```c
-float c_sdsdot( const CBLAS_INT N, const float scalar, const float *X, const CBLAS_INT strideX, const float *Y, const CBLAS_INT strideY );
-```
-
-#### c_sdsdot_ndarray( N, scalar, \*X, strideX, offsetX, \*Y, strideY, offsetY )
-
-Calculates the dot product of vectors `x` and `y` with extended accumulation using alternative indexing semantics.
-
-```c
-const float x[] = { 1.0f, -2.0f, 3.0f, -4.0f, 5.0f, -6.0f, 7.0f, -8.0f };
-const float y[] = { 1.0f, -2.0f, 3.0f, -4.0f, 5.0f, -6.0f, 7.0f, -8.0f };
-
-float v = c_sdsdot_ndarray( 5, 0.0f, x, 1, 0, y, -1, 7 );
-// returns -80.0f
-```
-
-The function accepts the following arguments:
-
--   **N**: `[in] CBLAS_INT` number of indexed elements.
--   **scalar**: `[in] float` scalar constant to add to dot product.
--   **X**: `[in] float*` first input array.
--   **strideX**: `[in] CBLAS_INT` index increment for `X`.
--   **offsetX**: `[in] CBLAS_INT` starting index for `X`.
--   **Y**: `[in] float*` second input array.
--   **strideY**: `[in] CBLAS_INT` index increment for `Y`.
--   **offsetY**: `[in] CBLAS_INT` starting index for `Y`.
-
-```c
-float c_sdsdot_ndarray( const CBLAS_INT N, const float scalar, const float *X, const CBLAS_INT strideX, const CBLAS_INT offsetX, const float *Y, const CBLAS_INT strideY, const CBLAS_INT offsetY );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/blas/base/sdsdot.h"
-#include <stdio.h>
-
-int main( void ) {
-    // Create strided arrays:
-    const float x[] = { 1.0f, -2.0f, 3.0f, -4.0f, 5.0f, -6.0f, 7.0f, -8.0f };
-    const float y[] = { 1.0f, -2.0f, 3.0f, -4.0f, 5.0f, -6.0f, 7.0f, -8.0f };
-
-    // Specify the number of indexed elements:
-    const int N = 8;
-
-    // Specify strides:
-    const int strideX = 1;
-    const int strideY = -1;
-
-    // Compute the dot product:
-    float d = c_sdsdot( N, 0.0f, x, strideX, y, strideY );
-
-    // Print the result:
-    printf( "dot product: %f\n", d );
-
-    // Compute the dot product:
-    d = c_sdsdot_ndarray( N, 0.0f, x, strideX, 0, y, strideY, 7 );
-
-    // Print the result:
-    printf( "dot product: %f\n", d );
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 * * *
 
@@ -451,7 +337,7 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [sdsdot]: http://www.netlib.org/lapack/explore-html/df/d28/group__single__blas__level1.html
 
-[@stdlib/array/float32]: https://github.com/stdlib-js/array-float32
+[@stdlib/array/float32]: https://github.com/stdlib-js/array-float32/tree/umd
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
@@ -459,11 +345,11 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/blas/base/ddot]: https://github.com/stdlib-js/blas-base-ddot
+[@stdlib/blas/base/ddot]: https://github.com/stdlib-js/blas-base-ddot/tree/umd
 
-[@stdlib/blas/base/dsdot]: https://github.com/stdlib-js/blas-base-dsdot
+[@stdlib/blas/base/dsdot]: https://github.com/stdlib-js/blas-base-dsdot/tree/umd
 
-[@stdlib/blas/base/sdot]: https://github.com/stdlib-js/blas-base-sdot
+[@stdlib/blas/base/sdot]: https://github.com/stdlib-js/blas-base-sdot/tree/umd
 
 <!-- </related-links> -->
 
