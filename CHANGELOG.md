@@ -2,9 +2,9 @@
 
 > Package changelog.
 
-<section class="release" id="unreleased">
+<section class="release" id="v0.3.0">
 
-## Unreleased (2025-09-01)
+## 0.3.0 (2026-01-30)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`2035f34`](https://github.com/stdlib-js/stdlib/commit/2035f344a1a469278042b7532f034dc6119933b3) - **docs:** add function documentation _(by Athan Reines)_
 -   [`8cea287`](https://github.com/stdlib-js/stdlib/commit/8cea2870cc30848a616b76259b3274caae387b10) - **docs:** fix return annotation values _(by Philipp Burckhardt)_
 -   [`d559fd7`](https://github.com/stdlib-js/stdlib/commit/d559fd70de9ec9b1d72d22543876f380e4062c69) - **refactor:** update include header guards for single precision real packages [(#7710)](https://github.com/stdlib-js/stdlib/pull/7710) _(by Shabareesh Shetty)_
 -   [`09c9ceb`](https://github.com/stdlib-js/stdlib/commit/09c9ceb58c6dd23c10f1980094851983c57d693f) - **chore:** fix formatting _(by Athan Reines)_
