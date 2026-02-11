@@ -2,6 +2,40 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2026-02-11)
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`f1626a2`](https://github.com/stdlib-js/stdlib/commit/f1626a2f9e5d8a71f99d878dfb2e60132e27af6d) - **bench:** refactor to use dynamic memory allocation in `blas/base/sdsdot` [(#10188)](https://github.com/stdlib-js/stdlib/pull/10188) _(by Prajjwal Bajpai)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 1 person contributed to this release. Thank you to this contributor:
+
+-   Prajjwal Bajpai
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.3.1">
 
 ## 0.3.1 (2026-02-08)
