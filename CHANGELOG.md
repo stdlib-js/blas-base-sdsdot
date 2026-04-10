@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-03-28)
+## Unreleased (2026-04-10)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`35566af`](https://github.com/stdlib-js/stdlib/commit/35566af0add64775e60422fd16e50e1bec3947e7) - **docs:** fix C examples in READMEs [(#11229)](https://github.com/stdlib-js/stdlib/pull/11229) _(by anee3, Athan Reines)_
 -   [`51c43ad`](https://github.com/stdlib-js/stdlib/commit/51c43ad346f4f7a14e7f131b0ea5ebf477959bae) - **bench:** refactor to use string interpolation in `blas/base/sdsdot` [(#10190)](https://github.com/stdlib-js/stdlib/pull/10190) _(by Prajjwal Bajpai)_
 -   [`f1626a2`](https://github.com/stdlib-js/stdlib/commit/f1626a2f9e5d8a71f99d878dfb2e60132e27af6d) - **bench:** refactor to use dynamic memory allocation in `blas/base/sdsdot` [(#10188)](https://github.com/stdlib-js/stdlib/pull/10188) _(by Prajjwal Bajpai)_
 
@@ -25,9 +26,11 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
+-   Athan Reines
 -   Prajjwal Bajpai
+-   anee3
 
 </section>
 
